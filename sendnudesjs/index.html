@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>David Ybañez | sendnudesjs</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Master Template for ColDist SharePoint">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0"> -->
+	<link rel="stylesheet" type="text/css" href="../css/custom-theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <body class="send-nudes-js">
+		
+	  <div class="jumbotron site-header text-center">
+		  <div class="container-fluid">
+			  <div class="row">
+			  	<div class="col">
+			  		<h1 class="title">SendNudesJS</h1>
+			  		<h5 class="sub-title">v1.0</h5>
+			  		<p class="lead"></p>
+			  		<p><strong>SendNudesJS</strong> is a script that prints<br>the popular phrase <strong>"send nudes"</strong>using only<br>expressions and operators in JavaScript.</p>
+			  		<p class="small"><strong>By <a href="http://dbybanez.github.io">David Ybañez</a></strong></p>
+			  	</div>
+			  </div>
+			  
+
+		  </div>
+		</div>
+		<div class="section projects">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-7">
+						<p class="medium-title">Printing the phrase <code id="sendnudes"></code> using only expressions and operators in JavaScript. The phrase is generated using the script! Awesome right?</p>
+						<br>
+						<h2>Short Story</h2>
+						<br>
+						<p>I've read an <a href="https://tutorialzine.com/2013/12/the-10-weirdest-programming-languages">article</a> online, it talks about <strong>10 weirdest programming languages</strong>. It basically shows a list of <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">esoteric programming languages</a> and at the end of the list, it shows an example on how JavaScript is added to the list. The article also links you to a website that contains a <a href="https://wtfjs.com/">list of "bugs" JavaScript</a> can generate.</p>
+						<br>
+				    <h2>How it works</h2>
+				    <br>
+				    <p>So, let's proceed on understanding how we generated the string <code>send nudes</code>.</p>
+				    <p>This expression <code>[![]]</code> returns <code>false</code>. This expression <code>[][[]]</code> returns <code>undefined</code>. When both expressions are concatinated using <code>+</code>, it returns the string <code>falseundefined</code>. In order to get each letter in the string, just access it like how normally access an <code>array</code>. </p>
+				    <p>So if we want to access letter "s" in the string, just do this expression <code>[![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>.</p>
+						<p>The index used to access the array returns a value of <code>3</code>. To be able to get a value of <code>3</code> I've added the expression <code>!+[]+!+[]</code> and <code>++[[]][+[]]</code> which returns <code>2 + 1</code>. The expression <code>[+[]]</code> returns an index of <code>0</code> in an array and post-increment it using <code>++</code> to get a value of <code>1</code>.</p>
+						<p>This is an example function that returns the string: </p>
+				    <div class="text-code">
+					    <samp>
+						    <span class="blue">function</span> <span class="light-yellow">sendnudes</span>() { <br>
+									&nbsp;&nbsp;<span class="purple">return</span> (([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+<span class="amber">' '</span>+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]); <br>
+								}
+							</samp>
+						</div>
+						<p>You can add different numbers to get the index of the letter in the sting.</p>
+						<p>You can also try it yourself! In this example, I'll guide you using Google Chrome.</p>
+						<p>
+							Steps:
+							<ol>
+								<li>while you're on the browser, <kbd>CTRL</kbd> <kbd>+</kbd> <kbd>SHIFT</kbd> <kbd>+</kbd> <kbd>I</kbd> to open Developer Tools.</li>
+								<li>Click on the Console tab right beside the Elements tab. </li>
+								<li>In your Console, you can see a greater than icon <code>&gt;</code>, click it.</li>
+								<li>Copy this statement below:</li>
+								<div class="text-code"><samp>
+  <span class="light-yellow">alert</span>(([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+' '+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]);</samp></div>
+  							<li>And paste it in your Console. Hit <kbd>Enter</kbd>.</li>
+							</ol>
+						</p>
+						<p>That's about it. You can do whatever you want with this script. Enjoy coding and exploring the weirdness of JavaScripti! :)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center"><p>Developed by <a href="https://www.linkedin.com/in/dbybanez">David Ybañez</a>. <a href="mit-license.html">Licensed under MIT</a></p></footer>
+		<script type="text/javascript" src="../js/script.js"></script>
+		<script>
+			var jq = jQuery.noConflict();
+
+			(function($){
+				var nudes = (([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+' '+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]);
+				$("#sendnudes").html(nudes);
+			})(jq);
+		</script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106400387-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

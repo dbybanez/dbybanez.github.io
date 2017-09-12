@@ -1,0 +1,119 @@
+html {
+	//min-height: 100%;
+}
+
+body {
+	// background-image: url("../images/pentagons.png"), url("../images/tire-track-01.png"), url("../images/tire-track-02.png"), url("../images/concrete_pattern.jpg");
+	// background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+	// background-size: auto, auto, auto, 800px 800px;
+	// background-position: left bottom, right bottom, right 194px,0% 0%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #F5F5F5;
+	color: #212121;
+}
+
+// .main-content {
+// 	display: block;
+// 	position: relative;
+// }
+
+.section {
+	padding: 2rem 2rem;
+	.title {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+#Layer_1 {
+	padding-top: 1rem;
+	width: 100px;
+	.cls-1 {
+		-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.46);
+		-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.46);
+		box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.46);
+	}
+}
+
+.projects {
+	.project {
+		.pl-badge-js {
+			background-color: #F0DB4F;
+			color: $black;
+			font-weight: 400;
+		}
+	}
+}
+
+.send-nudes-js {
+	.site-header {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+100;Red+3D */
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#49c0f0+0,2cafe3+100;Blue+3D+%2311 */
+		background: #49c0f0; /* Old browsers */
+		background: -moz-linear-gradient(-45deg, #49c0f0 0%, #2cafe3 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, #49c0f0 0%,#2cafe3 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg, #49c0f0 0%,#2cafe3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49c0f0', endColorstr='#2cafe3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		.title {
+			font-size: 3rem;
+		}
+		.small {
+			font-size: 1rem;
+			a {
+				color: $white;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		p {
+			font-size: 1.2rem;
+			strong {
+				color: rgba($white, 1.0);
+			}
+		}
+	}
+	.text-code {
+		background-color: #212121;
+		padding: 1rem;
+		margin-bottom: 1rem;
+		samp {
+			//background-color: #424242;
+			color: $white;
+		}
+		.blue {
+			color: #03A9F4;
+		}
+		.green {
+			color: #8BC34A;
+		}
+		.red {
+			color: #F44336;
+		}
+		.purple {
+			color: #9C27B0;
+		}
+		.light-yellow {
+			color: #FFF59D;
+		}
+		.amber {
+			color: #FFC107;
+		}
+	}
+	
+}
+
+.medium-title {
+	font-size: 1.2rem;
+}
+
+body {
+	height: 100%;
+}
+
+footer {
+	padding: 1rem;
+}

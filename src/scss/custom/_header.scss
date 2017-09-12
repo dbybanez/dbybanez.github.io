@@ -1,0 +1,30 @@
+.site-header {
+	border-radius: 0rem;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3949ab+0,03a9f4+100 */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff604c+0,e166b7+100 */
+	background: #ff604c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ff604c 0%, #e166b7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #ff604c 0%,#e166b7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #ff604c 0%,#e166b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff604c', endColorstr='#e166b7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: $white;
+	margin-bottom: 0rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	.title {
+		font-weight: 400;
+		> span {
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+	}
+	.sub-title {
+		margin-bottom: 1rem;
+		letter-spacing: 5px;
+		font-weight: 300;
+	}
+	p {
+		font-weight: 300;
+		color: rgba($white, 0.8);
+	}
+}
