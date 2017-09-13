@@ -12665,7 +12665,8 @@ body {
   padding: 1rem;
   margin-bottom: 1rem; }
   .send-nudes-js .text-code samp {
-    color: #fff; }
+    color: #fff;
+    word-wrap: break-word; }
   .send-nudes-js .text-code .blue {
     color: #03A9F4; }
   .send-nudes-js .text-code .green {
