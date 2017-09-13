@@ -12631,8 +12631,15 @@ body {
   /* IE6-9 fallback on horizontal gradient */
   padding-top: 3rem;
   padding-bottom: 3rem; }
+  @media (max-width: 370px) {
+    .send-nudes-js .site-header {
+      padding-left: 0rem;
+      padding-right: 0rem; } }
   .send-nudes-js .site-header .title {
     font-size: 3rem; }
+    @media (max-width: 370px) {
+      .send-nudes-js .site-header .title {
+        font-size: 2.5rem; } }
   .send-nudes-js .site-header .small {
     font-size: 1rem; }
     .send-nudes-js .site-header .small a {
@@ -12662,6 +12669,10 @@ body {
     color: #FFF59D; }
   .send-nudes-js .text-code .amber {
     color: #FFC107; }
+@media (max-width: 370px) {
+  .send-nudes-js .section {
+    padding-left: 0rem;
+    padding-right: 0rem; } }
 
 .medium-title {
   font-size: 1.2rem; }

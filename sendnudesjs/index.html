@@ -17,30 +17,34 @@
 			  		<h1 class="title">SendNudesJS</h1>
 			  		<h5 class="sub-title">v1.0</h5>
 			  		<p class="lead"></p>
-			  		<p><strong>SendNudesJS</strong> is a script that prints<br>the popular phrase <strong>"send nudes"</strong>using only<br>expressions and operators in JavaScript.</p>
+			  	</div>
+			  </div>
+			  <div class="row justify-content-center">
+			  	<div class="col-12 col-sm-7 col-md-7">
+			  		<p><strong>SendNudesJS</strong> is a script that prints the popular phrase <strong>"send nudes"</strong> using only expressions and operators in JavaScript.</p>
 			  		<p class="small"><strong>By <a href="http://dbybanez.github.io">David Ybañez</a></strong></p>
 			  	</div>
 			  </div>
-			  
 
 		  </div>
 		</div>
 		<div class="section projects">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
-					<div class="col-7">
-						<p class="medium-title">Printing the phrase <code id="sendnudes"></code> using only expressions and operators in JavaScript. The phrase is generated using the script! Awesome right?</p>
+					<div class="col-12 col-sm-7 col-md-7">
+						<p class="medium-title">This phrase <code id="sendnudes"></code> is generated using the script! Awesome right?</p>
 						<br>
 						<h2>Short Story</h2>
 						<br>
-						<p>I've read an <a href="https://tutorialzine.com/2013/12/the-10-weirdest-programming-languages">article</a> online, it talks about <strong>10 weirdest programming languages</strong>. It basically shows a list of <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">esoteric programming languages</a> and at the end of the list, it shows an example on how JavaScript is added to the list. The article also links you to a website that contains a <a href="https://wtfjs.com/">list of "bugs" JavaScript</a> can generate.</p>
+						<p>I've read an <a href="https://tutorialzine.com/2013/12/the-10-weirdest-programming-languages">article</a> online, it talks about <strong>10 weirdest programming languages</strong>. It basically shows a list of <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">esoteric programming languages</a>. At the end of the list, shows an example of why JavaScript is added to it. The article also links you to a website that contains a <a href="https://wtfjs.com/">list of "bugs" JavaScript</a> can do.</p>
 						<br>
 				    <h2>How it works</h2>
 				    <br>
-				    <p>So, let's proceed on understanding how we generated the string <code>send nudes</code>.</p>
-				    <p>This expression <code>[![]]</code> returns <code>false</code>. This expression <code>[][[]]</code> returns <code>undefined</code>. When both expressions are concatinated using <code>+</code>, it returns the string <code>falseundefined</code>. In order to get each letter in the string, just access it like how normally access an <code>array</code>. </p>
-				    <p>So if we want to access letter "s" in the string, just do this expression <code>[![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>.</p>
-						<p>The index used to access the array returns a value of <code>3</code>. To be able to get a value of <code>3</code> I've added the expression <code>!+[]+!+[]</code> and <code>++[[]][+[]]</code> which returns <code>2 + 1</code>. The expression <code>[+[]]</code> returns an index of <code>0</code> in an array and post-increment it using <code>++</code> to get a value of <code>1</code>.</p>
+				    <p>So, let's proceed on how we generated the string <code>send nudes</code>.</p>
+				    <p>This expression <code>[![]]</code> returns <code>false</code> while this expression <code>[][[]]</code> returns <code>undefined</code>. When both expressions are concatinated using <code>+</code>, it returns a string <code>falseundefined</code>. In order to get each letter in the string, just access it like how you normally access an <code>array</code>. An example of this is <code>arr[]</code> but instead of using a variable named <code>arr</code>, we only used expressions.</p>
+				    <p>So if we want to access letter "s" in the string, just do this expression <code>([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>. Confusing right? Don't give up just yet!</p>
+				    <p>Let's try to understand this, <code>([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>. This expression <code>([![]]+[][[]])</code> returns the string <code>falseundefined</code>, right? Notice following expressions looks like it's enclosed in <code>[]</code> which denotes an <code>array</code>. This means that the expression inside <code>[]</code> must be an <code>inteteger</code>. Inside the <code>[]</code>, you can see that 2 expressions were added. The first operand <code>(!+[]+!+[])</code> returns a value of <code>2</code> while the second operand <code>(++[[]][+[]])</code> returns a value of <code>1</code>. In short, our expression inside <code>[]</code> looks like this <code>2 + 1</code>. To further explain why we got a value of <code>1</code>, notice that at the beginning of the second operand, there's an expression <code>++</code>. <code>++</code> basically means incrementing a value. Since we added it at the beginning of an expression, the value is incremented before it is returned. In programming, this is what we call post-increment. The expression <code>[+[]]</code> returns the index of <code>0</code>. Notice how it is enclosed with <code>[]</code>, this means that the expression <code>++[[]][+[]]</code> is an <code>array</code>.</p>
+						<p>When both operands are added, it returns a value of <code>3</code>. So when we convert it to a simpler expression using a variable, it looks like this <code>arr[3]</code> where <code>arr</code> is an <code>array</code> of characters while <code>3</code> is the number we used to access the index of an array.</p>
 						<p>This is an example function that returns the string: </p>
 				    <div class="text-code">
 					    <samp>
@@ -49,18 +53,19 @@
 								}
 							</samp>
 						</div>
-						<p>You can add different numbers to get the index of the letter in the sting.</p>
-						<p>You can also try it yourself! In this example, I'll guide you using Google Chrome.</p>
+						<p>You can manipulate the expressions freely but keep in mind the syntax of JavaScript.</p>
+						<p>If you're still not convinced, you can also try it yourself! In this example, I'll guide on how to execute this expression using Google Chrome.</p>
 						<p>
 							Steps:
 							<ol>
-								<li>while you're on the browser, <kbd>CTRL</kbd> <kbd>+</kbd> <kbd>SHIFT</kbd> <kbd>+</kbd> <kbd>I</kbd> to open Developer Tools.</li>
+								<li>While you're on the browser, <kbd>CTRL</kbd> <kbd>+</kbd> <kbd>SHIFT</kbd> <kbd>+</kbd> <kbd>I</kbd> to open Developer Tools.</li>
 								<li>Click on the Console tab right beside the Elements tab. </li>
 								<li>In your Console, you can see a greater than icon <code>&gt;</code>, click it.</li>
 								<li>Copy this statement below:</li>
 								<div class="text-code"><samp>
   <span class="light-yellow">alert</span>(([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+' '+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]);</samp></div>
   							<li>And paste it in your Console. Hit <kbd>Enter</kbd>.</li>
+  							<li>You'll notice that a pop up box shows up displaying the text <code>send nudes</code>.
 							</ol>
 						</p>
 						<p>That's about it. You can do whatever you want with this script. Enjoy coding and exploring the weirdness of JavaScripti! :)</p>
