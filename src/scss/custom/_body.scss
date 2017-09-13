@@ -130,3 +130,12 @@ body {
 footer {
 	padding: 1rem;
 }
+
+.social-link {
+	font-size: 2rem;
+	color: rgba($white, 0.9);
+	margin-right: .5rem;
+	&:hover {
+		color: rgba($white, 1.0);
+	}
+}
