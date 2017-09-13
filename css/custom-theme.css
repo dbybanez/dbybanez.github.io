@@ -12598,7 +12598,14 @@ body {
   color: #212121; }
 
 .section {
-  padding: 2rem 2rem; }
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem; }
+  @media (max-width: 390px) {
+    .section {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
   .section .title {
     font-size: 2rem;
     margin-bottom: 2rem; }
@@ -12612,9 +12619,11 @@ body {
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.46); }
 
 .projects .project .pl-badge-js {
-  background-color: #F0DB4F;
-  color: #000;
-  font-weight: 400; }
+  background-color: #FFC107;
+  color: #fff; }
+.projects .project .pl-badge-design {
+  background-color: #03A9F4;
+  color: #fff; }
 
 .send-nudes-js .site-header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+100;Red+3D */

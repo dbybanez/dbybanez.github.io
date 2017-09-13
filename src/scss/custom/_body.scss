@@ -18,11 +18,19 @@ body {
 // }
 
 .section {
-	padding: 2rem 2rem;
+	padding-top: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-bottom: 2rem;
+	@media(max-width: 390px) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 	.title {
 		font-size: 2rem;
 		margin-bottom: 2rem;
 	}
+
 }
 
 #Layer_1 {
@@ -38,9 +46,14 @@ body {
 .projects {
 	.project {
 		.pl-badge-js {
-			background-color: #F0DB4F;
-			color: $black;
-			font-weight: 400;
+			background-color: #FFC107;
+			color: $white;
+			//font-weight: 400;
+		}
+		.pl-badge-design {
+			background-color: #03A9F4;
+			color: $white;
+			//font-weight: 400;
 		}
 	}
 }
