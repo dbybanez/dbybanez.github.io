@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>David Ybañez | SendNudesjs</title>
+  	<title>SendNudes.JS | David Ybañez</title>
 	  <meta charset="utf-8">
-	  <meta name="description" content="SendNudesJS is a script that prints the popular phrase 'send nudes' using only expressions and operators in JavaScript">
-	  <meta name="author" content="">
+	  <meta name="description" content="SendNudes.JS is a script that prints the popular internet phrase 'send nudes' using only expressions and operators in JavaScript">
+	  <meta name="author" content="David Ybañez">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0"> -->
 		<link rel="stylesheet" type="text/css" href="../css/custom-theme.css">
@@ -12,8 +12,8 @@
 		<link rel="image_src" href="../images/send-nudes-thumb.PNG" / >
 		<meta property='og:image' content='http://dbybanez.github.io/images/send-nudes-thumb.PNG'/>
 		<meta property="og:type" content="website">
-		<meta property="og:title" content="SendNudesJS">
-		<meta property="og:description" content='SendNudesJS is a script that prints the popular phrase "send nudes" using only expressions and operators in JavaScript.'>
+		<meta property="og:title" content="SendNudes.JS">
+		<meta property="og:description" content='SendNudes.JS is a script that prints the popular internet phrase "send nudes" using only expressions and operators in JavaScript.'>
 		<meta property="og:url" content="https://dbybanez.github.io/sendnudesjs/">
 		<meta property="og:image" content="https://dbybanez.github.io/images/send-nudes-thumb.jpg">
 		<meta property="fb:app_id" content="117653138954537">
@@ -85,7 +85,7 @@
 				    <p>So, let's proceed on how we generated the string <code>send nudes</code>.</p>
 				    <p>This expression <code>[![]]</code> returns <code>false</code> while this expression <code>[][[]]</code> returns <code>undefined</code>. When both expressions are concatinated using <code>+</code>, it returns a string <code>falseundefined</code>. In order to get each letter in the string, just access it like how you normally access an <code>array</code>. An example of this is <code>arr[]</code> but instead of using a variable named <code>arr</code>, we only used expressions.</p>
 				    <p>So if we want to access letter "s" in the string, just do this expression <code>([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>. Confusing right? Don't give up just yet!</p>
-				    <p>Let's try to understand this, <code>([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>. This expression <code>([![]]+[][[]])</code> returns the string <code>falseundefined</code>, right? Notice the following expressions looks like it's enclosed in <code>[]</code> which denotes an <code>array</code>. This means that the expression inside <code>[]</code> must be an <code>inteteger</code>. Inside the <code>[]</code>, you can see that 2 expressions were added. The first operand <code>(!+[]+!+[])</code> returns a value of <code>2</code> while the second operand <code>(++[[]][+[]])</code> returns a value of <code>1</code>. In short, our expression inside <code>[]</code> looks like this <code>2 + 1</code>. To further explain why we got a value of <code>1</code>, notice that at the beginning of the second operand, there's an expression <code>++</code>. The expression <code>++</code> basically means incrementing a value. Since we've added it at the beginning of an expression, the value is incremented before it is returned. In programming, this is what we call pre-increment. The expression <code>[+[]]</code> returns the index of <code>0</code>. Notice how it is enclosed with <code>[]</code>, this means that the expression <code>++[[]][+[]]</code> is an <code>array</code>.</p>
+				    <p>Let's try to understand this, <code>([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]</code>. This expression <code>([![]]+[][[]])</code> returns the string <code>falseundefined</code>, right? Notice the following expressions looks like it's enclosed in <code>[]</code> which denotes an <code>array</code>. This means that the expression inside <code>[]</code> must be an <code>integer</code>. Inside the <code>[]</code>, you can see that 2 expressions were added. The first operand <code>(!+[]+!+[])</code> returns a value of <code>2</code> while the second operand <code>(++[[]][+[]])</code> returns a value of <code>1</code>. In short, our expression inside <code>[]</code> looks like this <code>2 + 1</code>. To further explain why we got a value of <code>1</code>, notice that at the beginning of the second operand, there's an expression <code>++</code>. The expression <code>++</code> basically means incrementing a value. Since we've added it at the beginning of an expression, the value is incremented before it is returned. In programming, this is what we call pre-increment. The expression <code>[+[]]</code> returns the index of <code>0</code>. Notice how it is enclosed with <code>[]</code>, this means that the expression <code>++[[]][+[]]</code> is an <code>array</code>.</p>
 						<p>When both operands are added, it returns a value of <code>3</code>. So when we convert it to a simpler expression using a variable, it looks like this <code>arr[3]</code> where <code>arr</code> is an <code>array</code> of characters while <code>3</code> is the number we used to access the index of an array.</p>
 						<p>This is an example function that returns the string: </p>
 				    <div class="text-code">
