@@ -72,7 +72,7 @@
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						    <span aria-hidden="true">&times;</span>
 						  </button>
-						  <strong>Hey there! Thanks for coming!</strong> A console will be available soon for you to test out the script! So you don't have to do it cowboy style. Stay tuned for more updates! :)
+						  <strong>Hey there! New feature is here!</strong> JSConsole was added at the bottom part to test out the script immediately. <a href="https://jsconsole.com/">JSConsole</a> by <a href="https://twitter.com/rem">@rem</a>
 						</div>
 						<br>
 						<p>If you want to continue this development be sure to read the <a href="mit-license.html">MIT License</a> and you're good to go. You can clone a copy of the script through Git </p>
@@ -104,20 +104,32 @@
 						</div>
 						<p>You can manipulate the expressions freely but keep in mind the syntax of JavaScript.</p>
 						<p>If you're still not convinced, you can also try it yourself! In this example, I'll guide on how to execute this expression using Google Chrome.</p>
-						
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+						  </button>
+						  <strong>Hey there!</strong> Below is the console you can use with the script. Go on, copy the code in the steps and paste it here. Press <kbd>Enter</kbd> when you're done! <a href="https://jsconsole.com/">JSConsole</a> by <a href="https://twitter.com/rem">@rem</a>
+						</div>
+						<iframe src="https://jsconsole.com/" width="100%" height="200px" border="0" frameborder="0"></iframe>
 						<p>
 							Steps:
 							<ol>
 								<li>While you're on the browser, <kbd>CTRL</kbd> <kbd>+</kbd> <kbd>SHIFT</kbd> <kbd>+</kbd> <kbd>I</kbd> to open Developer Tools.</li>
 								<li>Click on the Console tab right beside the Elements tab. </li>
 								<li>In your Console, you can see a greater than icon <code>&gt;</code>, click it.</li>
-								<li>Copy this statement below:</li>
-								<div class="text-code"><samp>
+								<li>Copy this statement below: Or <br><br></li>
+								<button class="btn btn-primary btn-sm btn-copy"><i class="mdi mdi-link"></i> Copy code to clipboard</button>
+								
+								<br><br>
+								<div class="text-code">
+								
+								<samp>
   <span class="light-yellow">alert</span>(([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+' '+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]);</samp></div>
   							<li>And paste it in your Console. Hit <kbd>Enter</kbd>.</li>
   							<li>You'll notice that a pop up box shows up displaying the text <code>send nudes</code>.
 							</ol>
 						</p>
+
 						<p>That's about it. You can do whatever you want with this script. Enjoy coding and exploring the weirdness of JavaScripti! :)</p>
 					</div>
 				</div>
@@ -132,6 +144,72 @@
 			(function($){
 				var nudes = sendnudes();
 				$("#sendnudes").html(nudes);
+
+				function copyTextToClipboard(text) {
+				  var textArea = document.createElement("textarea");
+
+				  //
+				  // *** This styling is an extra step which is likely not required. ***
+				  //
+				  // Why is it here? To ensure:
+				  // 1. the element is able to have focus and selection.
+				  // 2. if element was to flash render it has minimal visual impact.
+				  // 3. less flakyness with selection and copying which **might** occur if
+				  //    the textarea element is not visible.
+				  //
+				  // The likelihood is the element won't even render, not even a flash,
+				  // so some of these are just precautions. However in IE the element
+				  // is visible whilst the popup box asking the user for permission for
+				  // the web page to copy to the clipboard.
+				  //
+
+				  // Place in top-left corner of screen regardless of scroll position.
+				  textArea.style.position = 'fixed';
+				  textArea.style.top = 0;
+				  textArea.style.left = 0;
+
+				  // Ensure it has a small width and height. Setting to 1px / 1em
+				  // doesn't work as this gives a negative w/h on some browsers.
+				  textArea.style.width = '2em';
+				  textArea.style.height = '2em';
+
+				  // We don't need padding, reducing the size if it does flash render.
+				  textArea.style.padding = 0;
+
+				  // Clean up any borders.
+				  textArea.style.border = 'none';
+				  textArea.style.outline = 'none';
+				  textArea.style.boxShadow = 'none';
+
+				  // Avoid flash of white box if rendered for any reason.
+				  textArea.style.background = 'transparent';
+
+
+				  textArea.value = text;
+
+				  document.body.appendChild(textArea);
+
+				  textArea.select();
+
+				  try {
+				    var successful = document.execCommand('copy');
+				    var msg = successful ? 'successful' : 'unsuccessful';
+				    console.log('Copying text command was ' + msg);
+				  } catch (err) {
+				    console.log('Oops, unable to copy');
+				  }
+
+				  document.body.removeChild(textArea);
+				}
+
+
+				var copyBtn = document.querySelector('.btn-copy');
+
+				copyBtn.addEventListener('click', function(event) {
+				  copyTextToClipboard("alert(([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+' '+([![]]+[][[]])[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])+!+[]+!+[]]+([![]]+[][[]])[(++[[]][+[]])+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[]+!+[]+!+[])]+([![]]+[][[]])[(!+[]+!+[])+(++[[]][+[]])]);");
+				});
+
+
 			})(jq);
 		</script>
 		<script>
